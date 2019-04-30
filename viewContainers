@@ -2,6 +2,9 @@ import re
 import pyperclip_sc as pyperclip
 import Orion_view_containers as orion
 
+'''This program is designed to find contianer ID patterns from the clipboard, and then launch google chrome > orion > 
+view containers to view each match'''
+
 orionLotRegex = re.compile(r'\d{8}-\d{3,4}')
 mqtIdentifier = re.compile('^2019')
 

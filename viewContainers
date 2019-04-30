@@ -9,7 +9,6 @@ orionLotRegex = re.compile(r'\d{8}-\d{3,4}')
 mqtIdentifier = re.compile('^2019')
 
 text = str(pyperclip.paste())
-#matches = []
 
 def runTest():
     matches = []

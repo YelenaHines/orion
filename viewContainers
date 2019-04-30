@@ -1,0 +1,23 @@
+import re
+import pyperclip_sc as pyperclip
+import Orion_view_containers as orion
+
+orionLotRegex = re.compile(r'\d{8}-\d{3,4}')
+mqtIdentifier = re.compile('^2019')
+
+text = str(pyperclip.paste())
+#matches = []
+
+def runTest():
+    matches = []
+    for groups in orionLotRegex.findall(text):
+        if mqtIdentifier.search(groups) == None:
+            matches.append(groups)
+
+    orion.logon_orion()
+    orion.paste_container(matches)
+    
+
+
+
+runTest()   
